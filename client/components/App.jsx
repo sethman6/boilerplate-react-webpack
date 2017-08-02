@@ -1,36 +1,35 @@
 import React from 'react'
-import data from 'data'
+
 import getNotice from '../api'
 
-
 export default class App extends React.Component {
-    constructor (props){
-        super (props)
-        this.state = {
-            data: {}
-        }
-        this.setData = this.setData.bind(this)
+  constructor (props) {
+    super(props)
+    this.state = {
+      data: {title: 'noot noot', description: 'error'}
     }
+    this.setData = this.setData.bind(this)
+  }
 
-    componentDidMount() {
-        getNotice(this.setData)
+  componentDidMount () {
+    getNotice(this.setData)
+  }
+
+  setData (err, noticeData) {
+    if (!err) {
+      this.setState({data: noticeData})
+      console.log(noticeData)
     }
+  }
 
-    setData(err , noticeData){
-        if (!err) {
-            this.setState({data : noticeData})
-        }
-    }
+  render () {
+    return (
+      <div>
+        <h1>Auckland Transport Information Site</h1>
+        <h2>{this.state.data.title}</h2>
+        <h3> {this.state.data.description}</h3>
+      </div>
 
-    render (
-        return(
-            <div>
-              <h1>Auckland Transport Infomation Site</h1>
-              <h2>{this.set.data.title}</h2>
-              <h3> {this.set.data.description}</h3>
-            </div>
-
-        ))
+    )
+  }
 }
-
-export default App
