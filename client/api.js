@@ -3,7 +3,7 @@ import request from 'superagent'
 const akurl = 'https://api.at.govt.nz/v2/notifications/'
 const apikey = {Ocp-Apim-Subscription-Key:'e211ee79ed0748cfb49e320c6a55d7b2'}
 
-export function getNotice (callback) {
+export default function getNotice (callback) {
     request
         .get(akurl)
         .send(apikey)
