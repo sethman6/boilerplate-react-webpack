@@ -30,7 +30,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Sethman's Personal PRoject using React and API</h1>
+        <h1>Sethman's Personal Project using React and API</h1>
         <div className="flex-container" style={flexContainer}>
           {this.state.data.map(notice => {
             return <Notice data = {notice} key = {notice.id}/>
