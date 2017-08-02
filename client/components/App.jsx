@@ -1,12 +1,12 @@
 import React from 'react'
-
+import Notice from './Notice'
 import getNotice from '../api'
 
 export default class App extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      data: {title: 'noot noot', description: 'error'}
+      data: {}
     }
     this.setData = this.setData.bind(this)
   }
@@ -26,8 +26,7 @@ export default class App extends React.Component {
     return (
       <div>
         <h1>Auckland Transport Information Site</h1>
-        <h2>{this.state.data.title}</h2>
-        <h3> {this.state.data.description}</h3>
+        <Notice data={this.state.data}/>
       </div>
 
     )

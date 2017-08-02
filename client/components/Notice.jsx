@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function Notice (props) {
   return (
-    <div>
-      <h2>props.title</h2>
-      <h4>props.render</h4>
+    <div className="box">
+      <h2>{props.data.title}</h2>
+      <h4>{props.data.description}</h4>
     </div>
   )
 }
