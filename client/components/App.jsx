@@ -40,7 +40,11 @@ export default class App extends React.Component {
         <div className='title'><h1> Sethman's Personal Project using React and API</h1></div>
         <div className='Project-button'>
           <button onClick={this.handleOnClick}>
-            <img src="./project1.png" alt="Not working" style={style} />
+            <img src="./tictactoe.png" alt="Not working" style={style} />
+            {/*this would ebcome this.style*/}
+          </button>
+          <button onClick={this.handleOnClick}>
+            <img src="./yoda.png" alt="Not working" style={style} />
             {/*this would ebcome this.style*/}
           </button>
         </div>
