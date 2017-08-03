@@ -43,6 +43,7 @@ export default class App extends React.Component {
             <img src="./tictactoe.png" alt="Not working" style={style} />
             {/*this would ebcome this.style*/}
           </button>
+          <li> </li>
           <button onClick={this.handleOnClick}>
             <img src="./yoda.png" alt="Not working" style={style} />
             {/*this would ebcome this.style*/}

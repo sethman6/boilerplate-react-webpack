@@ -2,10 +2,6 @@ const express = require('express')
 const router = express.Router()
 const request = require('superagent')
 
-
-// const akurl = 'https://yoda.p.mashape.com/yoda'
-// const apikey = { "X-Mashape-Key": "fSnuTpJ7iGmshTDe0pwtqCvVy6lcp1GzjTRjsnzNOkUGdgcUWJ" }
-
 const akurl = "https://yoda.p.mashape.com/yoda?sentence=You+will+learn+how+to+speak+like+me+someday.++Oh+wait."
 const apikey = { "X-Mashape-Key": "fSnuTpJ7iGmshTDe0pwtqCvVy6lcp1GzjTRjsnzNOkUGdgcUWJ" }
     // .header("Accept", "text/plain")
