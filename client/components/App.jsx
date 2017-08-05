@@ -1,5 +1,5 @@
 import React from 'react'
-import Notice from './Notice'
+import Search from './Search'
 import getNotice from '../api'
 
 const flexContainer = {
