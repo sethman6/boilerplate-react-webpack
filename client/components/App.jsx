@@ -1,6 +1,6 @@
-import React from 'react'
+import React { Component }from 'react'
 import Search from './Search'
-import getNotice from '../api'
+import getYoda from '../api'
 
 const flexContainer = {
   display: "flex",

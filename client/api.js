@@ -1,7 +1,7 @@
 import request from 'superagent'
 
-const apiUrl = "https://yoda.p.mashape.com/yoda?"
-const apiKey = { "X-Mashape-Key": "fSnuTpJ7iGmshTDe0pwtqCvVy6lcp1GzjTRjsnzNOkUGdgcUWJ" }
+const apiUrl = "http://www.omdbapi.com/?i=tt3896198"
+const apiKey = { "apikey": "b63f191a" }
 
 export function getYoda(callback) {
     request
