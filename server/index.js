@@ -1,10 +1,8 @@
-var path = require('path')
-var express = require('express')
-var bodyParser = require('body-parser')
+var server = require('./server')
+const request = require('superagent')
 
-var server = express()
+var PORT = process.env.PORT || 3000
 
-server.use(bodyParser.json())
-server.use(express.static(path.join(__dirname, '../public')))
-
-module.exports = server
+server.listen(PORT, function() {
+    console.log('Listening on port', PORT)
+})
