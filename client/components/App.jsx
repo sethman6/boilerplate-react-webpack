@@ -36,11 +36,11 @@ export default class Yoda extends React.Component {
     return (
   <div>
     <div className = 'Title' ><h1> Sethman's Movie PRoject using React</h1> </div>
-    <div className = 'button'> </div>
-    <button onClick = {this.handleOnclick}> </button>
-    <img src = "./Movies.png" />
+    <div className = 'button'> </div><form> Enter Search <input/>
+    <button onClick = {this.handleOnclick}> Submit </button>
     <button onChange = {this.state.search}>
-    </button>
+    </button> </form> <p>
+     <img src = "./Movies.png" /> </p>
 </div>
     )
   }
