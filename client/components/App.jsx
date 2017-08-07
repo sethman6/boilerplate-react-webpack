@@ -54,7 +54,7 @@ export default class Yoda extends React.Component {
                     &nbsp;&nbsp;
                             <button id="search-by-title-button" type="button" class="btn-sm btn-primary">Search</button>
                     <button id="search-by-title-reset" type="reset" class="btn-sm">Reset</button>
-                        </div>
+                        <div>
                   <div class="hide" id="search-by-title-request">
                     <br />
                     <p>Request:</p>
@@ -68,8 +68,8 @@ export default class Yoda extends React.Component {
                     <p>Response:</p>
                     <pre class="alert alert-success" style="margin-bottom: 0px; white-space: normal;"></pre>
                   </div>
-                        </form>
-              </div>
+                        <form>
+              <div>
                 </div>
           </div>
 
