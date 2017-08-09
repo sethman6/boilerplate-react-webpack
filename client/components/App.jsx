@@ -6,22 +6,25 @@ export default class Yoda extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      data: []
-    }
+      movie: ''    }
+
     this.setYoda = this.setYoda.bind(this)
     this.handleOnclick = this.handleOnclick.bind(this)
     this.handleOchange = this.handleOnchange.bind(this)
   }
 
   handleOnclick(e) {
-    getYoda(this.setYoda)
+    getYoda(this.state.setYoda)
   }
 
   handleOnchange(e) {
-    searchBar(this.getSearch)
+    this.setState({
+      movie: e.target.value
+    })
   }
 
-  setYoda(err, quoted) {
+
+  setYoda(err, quoted){
     if (!err) {
       this.setState({ 'quote': quotedvalue })
     } else (console.log(err.message))
@@ -32,16 +35,24 @@ export default class Yoda extends React.Component {
       this.setState({ 'search': searchedvalue })
     } else (console.log(err.message))
   }
-  render (){
+
+  render () {
     return (
-  <div>
-    <div className = 'Title' ><h1> <b>Sethman's Movie PRoject using React</b></h1> </div>
-    <div className = 'button'> </div><form> Enter Movie Name <input/>
-    <button onClick = {this.handleOnclick}> Submit </button>
-    <button onChange = {this.state.search}>
-    </button> </form> <p>
-     <img src = "./Movies.png" /> </p>
-</div>
+      <div>
+              <title> <b> <h1>Sethman's PeRsonal Project using React </h1> </b> </title>
+
+         <form>
+          <div className="field">
+            <label className="label">Movie Finder</label>
+            <p className="control">
+              <input className="input" type="text" onChange={this.handleChange} />
+            </p>
+          </div>
+          <p className="control">
+            <button className="button" onClick={this.handleClick}>Search A Movie</button>
+          </p>
+        </form>
+      </div>
     )
   }
 }

@@ -3,7 +3,7 @@ import request from 'superagent'
 // const apiUrl = "https://api.themoviedb.org/3/search/movies"
 // const apiKey = { "apikey": "cc29287d88e7080c78b1169f92082e58" }
 
-export function getYoda(callback) {
+export function getYoda() {
     request
         .get('https://api.themoviedb.org/3/search/movie')
         // Sets query on the URL get request
@@ -21,6 +21,6 @@ export function getYoda(callback) {
                     }
                 })
                 // Dispatched receive actors in order to populate the store
-            return movie
+            return movies
         })
 }
