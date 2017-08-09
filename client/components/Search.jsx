@@ -1,26 +1,32 @@
-// import React, { Component } from ' react'
+import React from 'react'
+import {getYoda} from '../api'
 
-// class searchBar extends Component {
-//   constructor(props) {
-//     super(props)
-//     this.state = {}
-//   }
-//   this.searchBar = this.searchBar.bind(this)
-// }
+class searchBar extends React.Component {
+  render () {
+    return (
+      <div>
+          <h1 className="title is-1">Movies</h1>
+        <div className="flex">
+          {this.props.movies.map((movie, i) => {
+            return (
+              <div className="column is-4" key={i}>
+                  <div className="card">
+                    <div className="card-image">
+                      <figure className="image is-720x128">
+                        <img src={`https://image.tmdb.org/t/p/w640/${movie.posterPath}`} alt="Image"/>
+                      </figure>
+                    </div>
+                    <div className="media-content">
+                      <p className="title is-4">{movie.title}</p>
+                    </div>
+                  </div>
+              </div>
+            )
+          })}
+        </div> 
+      </div>
+    )
+  }
+}
 
-// render()
-// {
-//   return (
-//     <div>
-//       <input
-//         value={this.state.sub}
-//         onChange={(event) => this.setstate({ sub: event.target.value })} />
-//       valueOftheInput = {this.state.sub}
-//       )}
-// oninputChange(sub){
-//         this.setstate({ target })
-//  /* this.props.OnSearchsubchange(sub)  */
-// }
-// </div>
-//  )}
-// export default searchBar
+export default (searchBar) 

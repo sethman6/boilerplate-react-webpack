@@ -10,7 +10,7 @@ export default class Yoda extends React.Component {
     }
     this.setYoda = this.setYoda.bind(this)
     this.handleOnclick = this.handleOnclick.bind(this)
-    this.handleOnchange = this.handleOnchange.bind(this)
+    this.handleOchange = this.handleOnchange.bind(this)
   }
 
   handleOnclick(e) {
@@ -24,19 +24,19 @@ export default class Yoda extends React.Component {
   setYoda(err, quoted) {
     if (!err) {
       this.setState({ 'quote': quotedvalue })
-    } else (console.log('Not Happening'))
+    } else (console.log(err.message))
   }
 
   getSearch(err, quoted) {
     if (!err) {
       this.setState({ 'search': searchedvalue })
-    } else (console.log('Not Working'))
+    } else (console.log(err.message))
   }
   render (){
     return (
   <div>
-    <div className = 'Title' ><h1> Sethman's Movie PRoject using React</h1> </div>
-    <div className = 'button'> </div><form> Enter Search <input/>
+    <div className = 'Title' ><h1> <b>Sethman's Movie PRoject using React</b></h1> </div>
+    <div className = 'button'> </div><form> Enter Movie Name <input/>
     <button onClick = {this.handleOnclick}> Submit </button>
     <button onChange = {this.state.search}>
     </button> </form> <p>
