@@ -1,5 +1,6 @@
 import React from 'react'
 import {getYoda} from '../api'
+import {setYoda} from './App'
 
 class searchBar extends React.Component {
   render () {
@@ -7,7 +8,7 @@ class searchBar extends React.Component {
       <div>
           <h1 className="title is-1">Movies</h1>
         <div className="flex">
-          {this.props.movies.map((movie, i) => {
+          {this.props.movies.map((query, i) => {
             return (
               <div className="column is-4" key={i}>
                   <div className="card">
